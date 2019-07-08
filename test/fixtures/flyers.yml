@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  password_digest: MyString
+  occupation: MyString
+  description: MyText
+  airport_id: 1
+
+two:
+  user_name: MyString
+  password_digest: MyString
+  occupation: MyString
+  description: MyText
+  airport_id: 1
