@@ -23,7 +23,7 @@ Airport.create(name: "Birmingham International Airport", img_url: "https://www.f
 Airport.create(name: "Phoenix, Phoenix Sky Harbor International Airport", img_url: "https://www.skyharbor.com/ShopsFoodServices/Dining")
 Airport.create(name: "Los Angeles International Airport", img_url: "https://www.flylax.com/en/lax-dining-and-shopping")
 Airport.create(name: "Oakland Airport", img_url: "https://www.oaklandairport.com/shopping-dining-options/")
-Airport.create(name: "San Diego International Airport", img_url: "ps://www.san.org/Shop-Dine-Relax/Dining")
+Airport.create(name: "San Diego International Airport", img_url: "https://www.san.org/Shop-Dine-Relax/Dining")
 Airport.create(name: "San Francisco International Airport", img_url: "https://www.flysfo.com/shop-dine-relax/dining/")
 Airport.create(name: "Denver International Airport", img_url: "https://www.flydenver.com/enjoy_relax/dine")
 Airport.create(name: "New York, La Guardia Airport", img_url: "https://www.laguardiaairport.com/at-airport/shops-restaurants-and-services")
