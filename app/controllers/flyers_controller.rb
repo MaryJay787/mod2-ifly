@@ -1,9 +1,9 @@
 class FlyersController < ApplicationController
-  before_action :authenticate!, except: [:index, :show]
+  before_action :authenticate!, except: [:welcome, :index, :show]
 
   def welcome
   end
-  
+
   def index
     @flyers = Flyer.all
   end
