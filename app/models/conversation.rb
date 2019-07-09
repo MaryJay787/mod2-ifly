@@ -1,4 +1,4 @@
 class Conversation < ApplicationRecord
-  belongs_to :sender_id, :source => :flyer
-  belongs_to :recipient_id, :source => :flyer
+  belongs_to :sender, class_name: 'Flyer'
+  belongs_to :recipient, class_name: 'Flyer'
 end
