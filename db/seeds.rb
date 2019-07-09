@@ -8,12 +8,29 @@ Flyer.destroy_all
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Airport.create(name: "Southwest Georgia Regional Airport")
-Airport.create(name: "Hartsfield-Jackson Atlanta International Airport")
-Airport.create(name: "Augusta Regional Airport")
-Airport.create(name: "Brunswick Golden Isles Airport")
-Airport.create(name: "Columbus Metropolitan Airport")
-Airport.create(name: "Savannah/Hilton Head International Airport")
-Airport.create(name: "Valdosta Regional Airport")
 
-Flyer.create(user_name: "Nancy", password: "seriously", first_name: "Nancy", last_name: "Blue", occupation: "Teacher", img_url: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEBUQEhIVEBAQFQ8QDw8PDw8PDw8QFREWFhURFhUYHSggGBolHRUVITEhJSkrLi4uFyAzODMtNygtLisBCgoKDg0OGhAQGi0dHSUtLS0rLS0tLS0tLS0tLS0tLS0rLS0tLS0tLSstKy0tLS0rLS8vKy0vKy0tLS0tLS0rLf/AABEIALgBEQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xABCEAACAQIDBQQGBgkEAgMAAAABAgADEQQSIQUGMUFREyJhcTJCUoGRoQcWkrHB0RQVI1NUYoLw8UNyk6IzsiSj4f/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACMRAAICAgICAwEBAQAAAAAAAAABAhEDEiExBFETI0FhIjL/2gAMAwEAAhEDEQA/AO2G9H8pkxvP/KZgJSj9nMzDZnQDef8AlMX1n/lMwMklSoXMA3ZvHee3qmJd6P5T8pi18PaDRIck7yOi+sh9kxfWU+yflMMJJBIcj3Zt/WQ+yfiI/wBYz7PzmKKcXZnpDkN5G2N4j7PzjjeFvZ+cxQkKtOFsN5Guu329n5wybbY+r85jCnLNKnHyPZmsu1mPq/OTG1D0+cz0STyxj2Ze/Wh6fOP+sz0+coZZLLAezLv6yPT5ytj94EoLnqEKPE6nyEpbTxqYek1V+CjQc2PICePby7abEsajk2OiIL2C8gByHjzmWTJrwuzow4nk5fR6nW+kfDLrm92tzry0k8L9IeFqELnyE+2Co+M8BqYk3y8z6oHLxiw1XXKW4cLm4HhJ3n2b/Dj65Pp1dqEi4sQdQQbgiONot0njW529FTDsKVQlqZOik6f0k8D4cDPWMJVWogdDdW4H8POXDIpcfpzZcUsb/hfpY4lrWksVjCnvlagveEntFeE0MrdEf1o3T5xNtJhylRUhKqaQJ2YettFgua3CZ", airport_id: Airport.first.id, description: "I Love Teaching")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+atl = Airport.create([{ name: 'Hartsfield–Jackson Atlanta International Airport', img_url: 'http://apps.atl.com/Passenger/ShopDineExplore/Default.aspx' }])
+bhm = Airport.create([{ name: 'Birmingham International Airport', img_url: 'https://www.flybirmingham.com/in-the-airport/dining/' }])
+phx = Airport.create([{ name: 'Phoenix, Phoenix Sky Harbor International Airport', img_url: 'https://www.skyharbor.com/ShopsFoodServices/Dining' }])
+lax = Airport.create([{ name: 'Los Angeles International Airport', img_url: 'https://www.flylax.com/en/lax-dining-and-shopping' }])
+oak = Airport.create([{ name: 'Oakland Airport', img_url: 'https://www.oaklandairport.com/shopping-dining-options/' }])
+san = Airport.create([{ name: 'San Diego International Airport', img_url: 'ps://www.san.org/Shop-Dine-Relax/Dining' }])
+sfo = Airport.create([{ name: 'San Francisco International Airport', img_url: 'https://www.flysfo.com/shop-dine-relax/dining/' }])
+den = Airport.create([{ name: 'Denver International Airport', img_url: 'https://www.flydenver.com/enjoy_relax/dine' }])
+lga = Airport.create([{ name: 'New York, La Guardia Airport', img_url: 'https://www.laguardiaairport.com/at-airport/shops-restaurants-and-services' }])
+
