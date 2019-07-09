@@ -38,7 +38,7 @@ class FlyersController < ApplicationController
     end
   end
 
-  def find
+  def find_my_date
     @flyer = Flyer.find(params[:id])
   end
 

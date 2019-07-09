@@ -13,4 +13,7 @@
 <br>
 <p>Your Airport: <%= @flyer.airport.name %></p>
 
+<%= button_to "Find my date", "/find_my_date/#{@flyer.id}"%>
+
+<br>
 <%= link_to "Edit Profile", edit_flyer_path(@flyer)%>

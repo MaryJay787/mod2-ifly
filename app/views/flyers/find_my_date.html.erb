@@ -1,0 +1,10 @@
+<h1>List of People at Your Airport</h1>
+
+<h4><%= @flyer.to_s%></h4>
+  <ul>
+    <% Flyer.all.select do |fly| %>
+      <% if fly.airport.name == @flyer.airport.name %>
+        <li><%= fly.first_name %></li>
+      <% end %>
+    <% end %>
+  </ul>

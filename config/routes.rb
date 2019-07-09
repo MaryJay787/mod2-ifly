@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :flyers, :airports, :conversation, :meetups, :messages 
+  post '/find_my_date/:id', to: 'flyers#find_my_date'
+
+  resources :flyers, :airports, :conversation, :meetups, :messages
 end
- 
