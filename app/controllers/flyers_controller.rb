@@ -1,5 +1,5 @@
 class FlyersController < ApplicationController
-  before_action :authenticate!, except: [:welcome, :index, :show]
+  before_action :authenticate, except: [:welcome, :index, :new]
 
   def welcome
   end
@@ -36,6 +36,10 @@ class FlyersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def find
+    @flyer = Flyer.find(params[:id])
   end
 
   private
