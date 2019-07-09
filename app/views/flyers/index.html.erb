@@ -1,0 +1,7 @@
+<h1>List Of Flyers</h1>
+
+ <ul>
+   <% @flyers.each do |fly| %>
+    <li><%= link_to fly.to_s, flyer_path(fly) %></li>
+    <% end %>
+</ul>

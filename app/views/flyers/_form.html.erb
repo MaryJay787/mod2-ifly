@@ -1,0 +1,37 @@
+
+<% if @flyer.errors.present? %>
+  <ul>
+    <% @flyer.errors.full_messages.each do |msg| %>
+    <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @flyer do |f| %>
+  <%= f.label :user_name %>
+  <%= f.text_field :user_name %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :occupation %>
+  <%= f.text_field :occupation %>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.label :airport %>
+  <%= f.collection_select :airport_id, Airport.all, :id, :name %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
