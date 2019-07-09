@@ -1,0 +1,20 @@
+<h1>Your Date Details</h1>
+<h2>Restaurant: <%= @meetup.name %></h2>
+<br>
+<h3>Hours: <%= @meetup.store_hours %></h3>
+<h3>Airport: <%= @meetup.airport.name %></h3>
+<h3>Location: <%= @meetup.location %></h3>
+
+<% Flyer.all.map do |fly| %>
+<%if @meetup.conversation.sender_id == fly.id%>
+<h4>Interestor: <%= fly.to_s  %></h4>
+<%end%>
+<%end%>
+
+<% Flyer.all.map do |fly| %>
+<%if @meetup.conversation.recipient_id == fly.id%>
+<h4>Interestee: <%= fly.to_s  %></h4>
+<%end%>
+<%end%>
+
+<%= link_to "Edit Date", edit_meetup_path(@meetup)%>

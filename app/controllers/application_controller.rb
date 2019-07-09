@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def authenticate!
     unless current_user
       flash[:info] = "You must create an account."
-      redirect_to flyers_path
+      redirect_to welcome_path
     end
   end
 
