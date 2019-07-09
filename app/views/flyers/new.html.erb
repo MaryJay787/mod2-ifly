@@ -1,0 +1,36 @@
+<h1>Create Account</h1>
+
+<% if @flyer.errors.present? %>
+<% @flyer.errors.full_messages do |msg| %>
+<li style="color :red"><%= msg %></li>
+<% end %>
+<% end %>
+
+<%= form_for @flyer do |f| %>
+  <%= f.label :user_name %>
+  <%= f.text_field :user_name %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :passowrd_digest %>
+  <br>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :occupation %>
+  <%= f.text_field :occupation %>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.label :airport_id %>
+  <%= f.collection_select :airport_id, Airport.all, :id, :name %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
