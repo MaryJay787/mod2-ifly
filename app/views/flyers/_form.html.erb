@@ -1,4 +1,5 @@
 
+
 <% if @flyer.errors.present? %>
   <ul>
     <% @flyer.errors.full_messages.each do |msg| %>
@@ -7,31 +8,80 @@
   </ul>
 <% end %>
 
-<%= form_for @flyer do |f| %>
-  <%= f.label :user_name %>
-  <%= f.text_field :user_name %>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br>
-  <%= f.label :occupation %>
-  <%= f.text_field :occupation %>
-  <br>
-  <%= f.label :img_url %>
-  <%= f.text_field :img_url %>
-  <br>
+<%= form_for @flyer , :html => {:class => "form-horizontal center"} do |f| %>
+  <div class = "form-group">
+    <%= f.label :user_name %>
+    <div class= "col-md-4">
+      <%= f.text_field :user_name %>
+    </div>
+  </div>
+
+  <div class = "form-group">
+    <%= f.label :password %>
+    <div class= "col-md-4">
+      <%= f.password_field :password %>
+    </div>
+  </div>
+ <div class="form-row">
+  <div class = "form-group">
+    <%= f.label :first_name %>
+    <div class= "col-md-4">
+      <%= f.password_field :first_name %>
+    </div>
+  </div>
+
+<div class = "form-group">
+    <%= f.label :last_name %>
+    <div class= "col-md-4">
+      <%= f.password_field :last_name %>
+    </div>
+  </div>
+</div>
+  <div class = "form-group">
+    <%= f.label :password %>
+    <div class= "col-md-4">
+      <%= f.password_field :password %>
+    </div>
+  </div>
+
+  <div class = "form-group">
+    <%= f.label :occupation %>
+    <div class= "col-md-4">
+      <%= f.password_field :occupation %>
+    </div>
+  </div>
+
+ <div class = "form-group">
+    <%= f.label :img_url %>
+    <div class= "col-md-4">
+      <%= f.password_field :img_url %>
+    </div>
+  </div>
+ 
   <%= f.label :airport %>
   <%= f.collection_select :airport_id, Airport.all, :id, :name %>
-  <br>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <br>
-  <br>
+
+ <div class = "form-group"> 
+    <%= f.label :description %>
+      <div class= "col-md-4">
+      <%= f.text_area :description %>
+    </div>
+</div>
+  
   <%= f.submit %>
+<% end %>
+<% if @flyer.errors.present? %>
+  <ul>
+    <% @flyer.errors.full_messages.each do |msg| %>
+    <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @flyer.errors.present? %>
+  <ul>
+    <% @flyer.errors.full_messages.each do |msg| %>
+    <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
 <% end %>
