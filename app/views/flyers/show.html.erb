@@ -1,8 +1,16 @@
 <h1>Profile</h1>
 
-<img src="<%= @flyer.img_url %>">
+<div class="image">
+  <%= image_tag(@flyer.img_url) %>
+</div>
+
 <br>
 <p>Name: <%= @flyer.to_s %></p>
+<br>
 <p>Occupation: <%= @flyer.occupation %></p>
-<p>Your Bio <%= @flyer.description %></p>
+<br>
+<p>Your Bio: <%= @flyer.description %></p>
+<br>
 <p>Your Airport: <%= @flyer.airport.name %></p>
+
+<%= link_to "Edit Profile", edit_flyer_path(@flyer)%>
