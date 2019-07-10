@@ -1,31 +1,33 @@
-class MessagesController < ApplicationController 
-    def index
-        @messages = Message.all
-    end 
-    
-    def new 
-        @message = Message.new
-    end 
-    
-    def show 
-        @message = Message.find(param[:id]) 
-    end 
-    
-    def create
-        @message = Message.new(message_params)
-        if @message.save
-          redirect_to @message
-        else
-          redirect_to message_path
-        end
-      end
-    
-      private
-    
-        def message_params
-          params.require(:conversation).permit(:content, :conversation_id, :user_id)
-        end
-    
+class MessagesController < ApplicationController
+  before_action do
+    @conversation = Conversation.find(params[:conversation_id])
+  end
+
+  def index
+    @messages = @conversation.messages
+    @message = @conversation.messages.new
+  end
+
+  def new
+    @message = @conversation.messages.new
+  end
+
+  def show
+    @message = Message.find(param[:id])
+  end
+
+
+  def create
+    @message = @conversation.messages.new(message_params)
+    if @message.save
+      redirect_to conversation_messages_path(@conversation)
     end
-    
-    end 
+  end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:content, :conversation_id, :flyer_id)
+  end
+
+end

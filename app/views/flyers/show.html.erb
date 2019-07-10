@@ -24,7 +24,10 @@
   </div>
 </div>
 
-<%= button_to "Find my date", "/find_my_date/#{@flyer.id}"%>
+  <% if current_user.id == @flyer.id %>
+    <%= button_to "Find my date", "/find_my_date/#{@flyer.id}"%>
+  <% end %>
+<%= link_to "Start A Conversation", conversations_path %>
 
 <br>
 <%= link_to "Edit Profile", edit_flyer_path(@flyer)%>

@@ -47,3 +47,8 @@ Meetup.create(name: "Chic-fil-A", location: "5900 Messer Airport Hwy", store_hou
 Meetup.create(name: "NYPD Pizza", location: "3800 E Sky Harbor Blvd,", store_hours: "7am - 9pm", airport_id: Airport.third.id, conversation_id: Conversation.third.id, accepted: true)
 Meetup.create(name: "Chelsea's Kitchen", location: "4 E Sky Harbor Blvd", store_hours: "6am - 9spm", airport_id: Airport.third.id, conversation_id: Conversation.third.id, accepted: true)
 Meetup.create(name: "Cheuvront Restaurant And Wine Bar", location: "3400 E Sky Harbor Blvd", store_hours: "11am - 10pm", airport_id: Airport.third.id, conversation_id: Conversation.first.id, accepted: true)
+
+
+Message.create(content: "Hello first message", conversation_id: Conversation.first.id, flyer_id: Flyer.first.id)
+Message.create(content: "Hi second message", conversation_id: Conversation.second.id, flyer_id: Flyer.second.id)
+Message.create(content: "Hello third conversation", conversation_id: Conversation.third.id, flyer_id: Flyer.third.id)

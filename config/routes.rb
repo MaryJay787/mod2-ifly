@@ -7,5 +7,9 @@ Rails.application.routes.draw do
 
   post '/find_my_date/:id', to: 'flyers#find_my_date'
 
-  resources :flyers, :airports, :conversation, :meetups, :messages
+  resources :flyers, :airports, :meetups
+
+  resources :conversations do
+    resources :messages
+  end
 end
