@@ -15,7 +15,7 @@ class Flyer < ApplicationRecord
     age.sample
   end
 
-  # def chat
-  #   Conversation.where(:sender_id = ? OR :recipient_id = ?, self.id, self.id )
-  # end
+  def chat
+    Conversation.where(:sender_id = ? OR :recipient_id = ?, self.id, self.id )
+  end
 end
