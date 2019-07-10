@@ -1,5 +1,5 @@
 class ConversationController < ApplicationController 
-index
+def index
     @conversation = Conversation.all
 end 
 
@@ -28,4 +28,3 @@ def create
 
 end
 
-end 
