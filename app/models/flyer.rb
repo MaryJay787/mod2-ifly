@@ -8,4 +8,9 @@ class Flyer < ApplicationRecord
   def to_s
     self.first_name + " " + self.last_name
   end
+
+  def age
+    age = (20...48).to_a
+    age.sample
+  end
 end

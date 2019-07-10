@@ -1,17 +1,28 @@
 <h1>Profile</h1>
 
-<div class="image">
-  <%= image_tag(@flyer.img_url) %>
+<div class="ui card">
+  <div class="image">
+    <%= image_tag(@flyer.img_url) %>
+  </div>
+  <div class="content">
+    <a class="header"><%= @flyer.to_s %></a>
+    <div class="meta">
+      <span class="occupation"><%= @flyer.occupation %></span>
+    </div>
+    <div class="description">
+       <%= @flyer.description %>
+    </div>
+    <div class="airport">
+      <%= @flyer.airport.name %>
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="age"></i>
+      <%= @flyer.age %>
+    </a>
+  </div>
 </div>
-
-<br>
-<p>Name: <%= @flyer.to_s %></p>
-<br>
-<p>Occupation: <%= @flyer.occupation %></p>
-<br>
-<p>Your Bio: <%= @flyer.description %></p>
-<br>
-<p>Your Airport: <%= @flyer.airport.name %></p>
 
 <%= button_to "Find my date", "/find_my_date/#{@flyer.id}"%>
 

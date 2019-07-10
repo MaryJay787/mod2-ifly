@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_211257) do
+ActiveRecord::Schema.define(version: 2019_07_10_151402) do
 
   create_table "airports", force: :cascade do |t|
     t.string "name"
@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 2019_07_08_211257) do
   create_table "messages", force: :cascade do |t|
     t.string "content"
     t.integer "conversation_id"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "flyer_id"
   end
 
 end

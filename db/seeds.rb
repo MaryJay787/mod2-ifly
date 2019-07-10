@@ -29,9 +29,9 @@ Airport.create(name: "Denver International Airport", img_url: "https://www.flyde
 Airport.create(name: "New York, La Guardia Airport", img_url: "https://www.laguardiaairport.com/at-airport/shops-restaurants-and-services")
 
 
-Flyer.create!(user_name: 'Aham', password: 'password', first_name: "Isha", last_name: "Ham", occupation: "Flight Attendant", description: "I love to travel.", img_url: "https://images.pexels.com/photos/935985/pexels-photo-935985.jpeg?cs=srgb&dl=accessories-afro-beautiful-935985.jpg&fm=jpg")
-Flyer.create!(user_name: 'Please', password: 'password', first_name: "Paris", last_name: "Hillson", occupation: "Actor", description: "I love to put on a show.", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwbTJkyFIarft2UxH2XyE75RBbicb2wHDsYlx74CNOZWqu-3w6")
-Flyer.create!(user_name: 'Baddie', password: 'password', first_name: "Maria", last_name: "Curson", occupation: "Beaution", description: "I love to make the world more beautiful", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWPXVfYwOUmSfsjKVvQCDz0LRyYeXTNtc2T3PMLdISKMi8mIaPqQ")
+Flyer.create!(user_name: 'Aham', password: 'password', first_name: "Isha", last_name: "Ham", occupation: "Flight Attendant", description: "I love to travel.", img_url: "http://kodlikes.com/go/aHR0cDovL3d3dy5zY2Fsc3lzLmNvbS8xcG5ncy9ibGFjay13b21hbi1wbmcvdmlldy1pbWFnZS5waHA/ZmlsZT0uL2JsYWNrX3dvbWFuX3BuZ18xNDEwMjAucG5n", airport_id: Airport.first.id)
+Flyer.create!(user_name: 'Please', password: 'password', first_name: "Paris", last_name: "Hillson", occupation: "Actor", description: "I love to put on a show.", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwbTJkyFIarft2UxH2XyE75RBbicb2wHDsYlx74CNOZWqu-3w6", airport_id: Airport.second.id)
+Flyer.create!(user_name: 'Baddie', password: 'password', first_name: "Maria", last_name: "Curson", occupation: "Beaution", description: "I love to make the world more beautiful", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWPXVfYwOUmSfsjKVvQCDz0LRyYeXTNtc2T3PMLdISKMi8mIaPqQ", airport_id: Airport.second.id)
 
 Conversation.create(sender_id: Flyer.first.id, recipient_id: Flyer.second.id)
 Conversation.create(sender_id: Flyer.second.id, recipient_id: Flyer.third.id)
