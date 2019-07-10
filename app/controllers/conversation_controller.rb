@@ -1,6 +1,6 @@
 class ConversationController < ApplicationController 
-index
-    @conversation = Conversation.all
+def index
+    @conversations = Conversation.all
 end 
 
 def new 
@@ -12,7 +12,7 @@ def show
 end 
 
 def create
-    @conversation = Conversation.new(flyer_params)
+    @conversation = Conversation.new(conversation_params)
     if @conversation.save
       redirect_to @conversation
     else
@@ -23,9 +23,8 @@ def create
   private
 
     def conversaton_params
-      params.require(:conversation).permit(:sender_id, :recipient)
+      params.require(:conversation).permit(:sender_id, :recipient_id)
     end
-
-end
+send
 
 end 
