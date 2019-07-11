@@ -17,20 +17,27 @@
 
  body {
     background-image: url("paper.gif");
-    background-color: #cccccc;
+    background-color: ccccc;
    }
-
-   .footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: red;
-      color: white;
-      text-align: center;
-    }
-
    
-    form {
-      text-align: center;
-    }
+   .login_form {
+      vertical-align: middle;
+  }
+
+  #myDIV { 
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 200px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: bottom;
+  top: 0;
+  left: 0;
+   background-repeat: no-repeat, repeat;
+   background-image: url("https://images.unsplash.com/photo-1520493004415-dca44df8ade5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=756&q=80"), url("paper.gif");
+   background-blend-mode: lighten;
+ }
