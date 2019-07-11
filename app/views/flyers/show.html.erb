@@ -1,4 +1,7 @@
 <h1>Profile</h1>
+<% if current_user.id == @flyer.id %>
+  <%= link_to "See My Messages", conversations_path %>
+<% end %>
 
 <div class="ui card">
   <div class="image">
@@ -23,11 +26,15 @@
     </a>
   </div>
 </div>
-
-  <% if current_user.id == @flyer.id %>
-    <%= button_to "Find my date", "/find_my_date/#{@flyer.id}"%>
-  <% end %>
-<%= link_to "Start A Conversation", conversations_path %>
-
 <br>
-<%= link_to "Edit Profile", edit_flyer_path(@flyer)%>
+  <% if current_user.id == @flyer.id %>
+    <%= button_to "Find my date", "/find_my_date/#{@flyer.id}" %>
+  <% end %>
+
+  <% if current_user.id != @flyer.id %>
+    <%= link_to "Start A Conversation", conversation_messages_path(@flyer.conversations.first.id) %>
+  <% end %>
+<br>
+  <% if current_user.id == @flyer.id %>
+    <%= button_to "Edit Profile", "/flyers/#{@flyer.id}/edit" %>
+  <% end %>
