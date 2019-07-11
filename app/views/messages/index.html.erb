@@ -39,7 +39,9 @@
   <%= f.text_field :flyer_id, value: current_user.id, type: "hidden" %>
 <div class="form-group">
   <%= f.submit "Send Reply", class: "form-control btn btn-primary" %>
+
 </div>
 <% end %>
 <%= button_to "Refresh", conversation_messages_path, :method => :get %>
+
 </div>
