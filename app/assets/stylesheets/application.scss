@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
  @import "bootstrap";
 
  body {
@@ -21,4 +20,15 @@
     background-color: #cccccc;
    }
 
+   .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+    }
 
+   
+   
