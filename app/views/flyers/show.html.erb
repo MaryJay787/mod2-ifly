@@ -3,11 +3,19 @@
   <%= link_to "See My Messages", conversations_path %>
 <% end %>
 
+
+
 <div class="ui card">
-  <div class="image">
-  
-    <%= image_tag(@flyer.img_url) %>
+
+  <div class="container">
+    <div class="row">
+      <div class="span4"></div>
+      <div class="span4"><%= image_tag(@flyer.img_url) %></div>
+    <div class="span4"></div>
   </div>
+</div>
+  </div>
+
   <div class="content">
     <a class="header"><%= @flyer.to_s %></a>
     <div class="meta">

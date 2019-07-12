@@ -44,4 +44,5 @@
 <% end %>
 <%= button_to "Refresh", conversation_messages_path, :method => :get %>
 <%= button_to "MeetUp", meetups_path, :method => :get %>
+<%= link_to "Back to Profile", flyer_path(current_user.id)%>
 </div>

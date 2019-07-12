@@ -1,13 +1,13 @@
-<h1>Conversation Index</h1>
+<h1>Mailbox</h1>
 
 <div class="ui list">
     <div class="item">
       <% @conversations.each do |conversation| %>
         <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
           <% if conversation.sender_id == current_user.id %>
-            <h5>R:<% recipient = Flyer.find(conversation.recipient_id) %></h5>
+            <% recipient = Flyer.find(conversation.recipient_id) %>
           <% else %>
-            <h5>S:<% recipient = Flyer.find(conversation.sender_id) %></h5>
+            <% sender = Flyer.find(conversation.sender_id) %>
           <% end %>
           <%= link_to recipient.to_s, conversation_messages_path(conversation)%>
         <% end %>
@@ -17,15 +17,7 @@
 </div>
 
 
-<div class="ui segment">
-  <h3>Available Flyers:</h3>
-  <div class="ui list">
-    <% @flyers.each do |flyer| %>
-      <% if flyer.id != current_user.id %>
-      <div class="item">
-        <%= flyer.to_s %> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: flyer.id), method: 'post'%>
-      </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+
+<br>
+<br>
+<%= link_to "Back to Profile", flyer_path(current_user.id)%>
