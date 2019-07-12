@@ -1,0 +1,23 @@
+<h1>Meeting Details</h1>
+
+<%= form_for @meetup do |f| %>
+  <%= f.label 'Pick Your Restaurants' %>
+  <br>
+  <%= f.collection_select :location, @meetup.restaurants, :name, :name%>
+  <br>
+  <%= f.label 'Name' %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label 'Meeting Time' %>
+  <br>
+  <%= f.text_field :store_hours %>
+  <br>
+  <%= f.label 'Your Airport' %>
+  <br>
+  <%= f.text_area :airport_id, :value => current_user.airport.name%>
+  <br>
+  <br>
+
+  <%= f.submit "Send Network Request" %>
+<% end %>

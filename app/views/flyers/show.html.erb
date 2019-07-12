@@ -36,6 +36,11 @@
     <%= link_to "Start A Conversation", conversation_messages_path(@flyer.conversations.first.id) %>
   <% end %>
 <br>
+  <% if current_user.id != @flyer.id %>
+    <%= link_to "Lets Meet Up!", new_meetup_path %>
+  <% end %>
+
+<br>
   <% if current_user.id == @flyer.id %>
-    <%= button_to "Edit Profile", "/flyers/#{@flyer.id}/edit" %>
+    <%= link_to "Edit Profile", edit_flyer_path %>
   <% end %>

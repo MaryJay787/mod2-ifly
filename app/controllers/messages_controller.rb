@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  before_action :authenticate
   before_action do
     @conversation = Conversation.find(params[:conversation_id])
   end
@@ -19,18 +20,18 @@ class MessagesController < ApplicationController
 
   def create
     @message = @conversation.messages.new(message_params)
-    
+
     if @message.save
       redirect_to conversation_messages_path
     end
   end
 
 
-  def destroy 
-    @message = Message.find(params[:id]) 
+  def destroy
+    @message = Message.find(params[:id])
     @message.destroy
     redirect_to conversation_messages_path
- end 
+ end
 
   private
 

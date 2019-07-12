@@ -1,4 +1,5 @@
 class MeetupsController < ApplicationController
+  before_action :authenticate
   def index
     @meetups = Meetup.all
     @flyers = Flyer.all
@@ -8,4 +9,24 @@ class MeetupsController < ApplicationController
     @meetup = Meetup.find(params[:id])
   end
 
+  def new
+  @meetup = Meetup.new
+
+  end
+
+  def create
+    @meetup = Meetup.new(meetup_params)
+      if @meetup.save
+        redirect_to meetups_path
+      else
+        render :new
+      end
+  end
+
+
+  private
+
+  def meetup_params
+    params.require(:meetup).permit(:name, :location, :store_hours, :airport_id)
+  end
 end

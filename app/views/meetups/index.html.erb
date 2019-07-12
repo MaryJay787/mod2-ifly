@@ -1,7 +1,3 @@
-<h1>List of Airport Restaurants</h1>
+<h1>Meeting Details</h1>
 
-<ul>
-  <% @meetups.each do |meet| %>
-  <li><%= link_to meet.name, meetup_path(meet) %></li>
-  <% end %>
-</ul>
+<h3><%= @meetup.location %></h3>
