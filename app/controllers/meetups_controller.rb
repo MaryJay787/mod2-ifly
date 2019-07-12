@@ -10,14 +10,13 @@ class MeetupsController < ApplicationController
   end
 
   def new
-  @meetup = Meetup.new
-
+    @meetup = Meetup.new
   end
 
   def create
     @meetup = Meetup.new(meetup_params)
       if @meetup.save
-        redirect_to meetups_path
+        redirect_to meetup_path(@meetup)
       else
         render :new
       end
@@ -27,6 +26,6 @@ class MeetupsController < ApplicationController
   private
 
   def meetup_params
-    params.require(:meetup).permit(:name, :location, :store_hours, :airport_id)
+    params.require(:meetup).permit(:name, :location, :store_hours, :airport_id, :conversation_id)
   end
 end

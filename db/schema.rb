@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_151402) do
+ActiveRecord::Schema.define(version: 2019_07_12_021332) do
 
   create_table "airports", force: :cascade do |t|
     t.string "name"
@@ -43,11 +43,10 @@ ActiveRecord::Schema.define(version: 2019_07_10_151402) do
     t.string "name"
     t.string "location"
     t.string "store_hours"
-    t.integer "airport_id"
-    t.integer "conversation_id"
-    t.boolean "accepted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "airport_id"
+    t.integer "conversation_id"
   end
 
   create_table "messages", force: :cascade do |t|

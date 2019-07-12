@@ -1,6 +1,8 @@
 class Meetup < ApplicationRecord
   belongs_to :airport
-  belongs_to :conversation, optional: nil
+  belongs_to :conversation
+  attribute :conversation_id, :integer, default: nil
+
 
   def restaurants
     Meetup.all.select do |meet|

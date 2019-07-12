@@ -1,5 +1,5 @@
 class FlyersController < ApplicationController
-  before_action :authenticate, except: [:welcome]
+  before_action :authenticate, except: [:welcome, :new]
 
   def welcome
   end
@@ -14,6 +14,15 @@ class FlyersController < ApplicationController
 
   def new
     @flyer = Flyer.new
+  end
+
+  def create
+    @flyer = Flyer.new(flyer_params)
+    if @flyer.save
+      redirect_to flyer_path(@flyer)
+    else
+      render :new
+    end
   end
 
   def edit
