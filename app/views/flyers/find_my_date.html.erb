@@ -5,6 +5,7 @@
     <% Flyer.all.select do |fly| %>
       <% if fly.airport.name == @flyer.airport.name && fly.to_s != @flyer.to_s %>
         <li><%= link_to fly.to_s, flyer_path(fly) %></li>
+        <img src='<%= fly.img_url %>' atl='profile' >
       <% end %>
     <% end %>
   </ul>
